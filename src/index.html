@@ -5,6 +5,7 @@
     <title>eikon parcel starter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
+    <link rel="stylesheet" href="https://use.typekit.net/jzw3syy.css" />
   </head>
   <body>
     <div class="nav">
@@ -13,9 +14,9 @@
         <div class="nav-lang">
           <div>FR</div>
           <div>/</div>
-          <div>FR</div>
+          <div>DE</div>
           <div>/</div>
-          <div>FR</div>
+          <div>EN</div>
         </div>
         <div class="nav-icons">
           <img src="img/cart.svg" alt="" />
@@ -27,30 +28,119 @@
     <header>
       <div class="header-elements">
         <h1><img src="img/big-logo.png" alt="" /></h1>
-        <div class="bottle-container">
+        <div class="header-bottle-container">
           <img src="img/bottle.png" alt="" />
         </div>
       </div>
-      <p>
-        La Brasserie Licorne, fondée à Estavayer-le-Lac et située dans une
-        bâtisse médiévale, produit des bières biologiques artisanales avec des
-        céréales locales.
-      </p>
-      <img src="img/arrow.svg" alt="" />
+      <div class="header-text-container">
+        <p>
+          La Brasserie Licorne, fondée à Estavayer-le-Lac et située dans une
+          bâtisse médiévale, produit des bières biologiques artisanales avec des
+          céréales locales.
+        </p>
+      </div>
+      <img class="header-arrow" src="img/arrow.svg" alt="" />
     </header>
-    <main></main>
-    <img src="img/beer.png" alt="" />
-    <div>
-      <span> 0% </span>
-      <h2>BLONDE</h2>
-      <span> CHF 16 </span>
-      <span> 4x33cl </span>
-    </div>
-    <div>
-      <img src="img/arrow-2.svg" alt="" />
-      <a href="">Ajouter au panier</a>
-      <img src="img/arrow-2.svg" alt="" />
-    </div>
+    <main>
+      <div class="product">
+        <img class="product-background" src="img/malt.png" alt="" />
+        <img class="product-beer" src="img/beer.png" alt="" />
+        <div class="product-info">
+          <span> 0% </span>
+          <h2>BLONDE</h2>
+          <span> CHF 16 </span>
+          <span> 4x33cl </span>
+        </div>
+        <div class="product-navigation">
+          <img src="img/arrow-2.svg" alt="" />
+          <a class="button" href="">Ajouter au panier</a>
+          <img src="img/arrow-2.svg" alt="" />
+        </div>
+      </div>
+      <div class="valeurs">
+        <div class="valeurs-slide-1 valeurs-text">
+          <span> Licorne ? Bière sans alcool ? Mais qui sommes nous ? </span>
+          <span> (venez découvrir notre univers !) </span>
+        </div>
+        <div class="valeurs-slide-2 valeurs-text">
+          <span> Sans Alcool </span>
+          <span>
+            l'élégance du goût, sans les effets indésirables de l'alcool.</span
+          >
+          <img src="img/icon-alcool.svg" alt="" />
+        </div>
+        <div class="valeurs-slide-3 valeurs-text">
+          <span> Bio </span>
+          <span>
+            Toutes nos bières sont forgées localement avec des produits bio et
+            de qualité supérieure.
+          </span>
+          <img src="img/icon-bio.svg" alt="" />
+        </div>
+        <div class="valeurs-slide-4 valeurs-text">
+          <span> Local </span>
+          <span>
+            Notre brasserie est basée à Estavayer-le-Lac dans une bâtisse
+            médiévale.
+          </span>
+          <img src="img/icon-local.svg" alt="" />
+        </div>
+        <div class="valeurs-slide-final valeurs-text">
+          <span>
+            Bières artisanales locales, d'une qualité exceptionnelle.
+          </span>
+          <div class="valeurs-buttons">
+            <a class="button">Découvrir nos bières</a>
+            <a class="button">Découvrir nos bières</a>
+          </div>
+        </div>
+        <img src="img/bottle-cap.png" alt="" />
+      </div>
+      <div class="cards-container">
+        <div class="cards">
+          <span>Blonde</span>
+          <img class="cards-beer" src="img/beer.png" alt="" />
+          <img class="cards-icon" src="img/cart.svg" alt="" />
+        </div>
+        <div class="cards">
+          <span>Blonde</span>
+          <img class="cards-beer" src="img/beer.png" alt="" />
+          <img class="cards-icon" src="img/cart.svg" alt="" />
+        </div>
+        <div class="cards">
+          <span>Blonde</span>
+          <img class="cards-beer" src="img/beer.png" alt="" />
+          <img class="cards-icon" src="img/cart.svg" alt="" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-left">
+        <img src="img/logo.svg" alt="" />
+        <div>
+          <a href="">Politique de confidentialité</a>
+          <a href="">Conditions générales de vente</a>
+        </div>
+        <div>
+          <img src="img/tiktok.svg" alt="" />
+          <img src="img/instagram.svg" alt="" />
+        </div>
+      </div>
+      <div class="footer-right">
+        <span>Ne ratez rien !</span>
+        <div>
+          <input
+            type="text"
+            class="footer-newsletter"
+            placeholder="entrez votre e-mail"
+            id="e-mail"
+            name="newsletter"
+          />
+          <input type="button" name="newsletter" value="s'inscrire" />
+        </div>
+        <span>© 2024 Licorne. Tous droits réservés.</span>
+      </div>
+    </footer>
     <script src="js/main.js" type="module"></script>
   </body>
 </html>

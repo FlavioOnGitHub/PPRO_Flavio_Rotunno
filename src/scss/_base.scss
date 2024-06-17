@@ -1,7 +1,7 @@
 :root {
-  --color-1: #333;
-  --color-2: #333;
-  --color-3: #333;
+  --color-1: #604c70;
+  --color-2: #eae9cd;
+  --color-3: #d7d48e;
 }
 
 * {
@@ -19,6 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
+  font-family: "josefin-sans";
   font-size: 1rem;
   line-height: 1.25;
   background-color: #ece3d1;

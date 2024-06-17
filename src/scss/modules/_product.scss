@@ -1,0 +1,44 @@
+.product {
+  position: relative;
+  width: 750px;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+.product-beer {
+  width: 530px;
+}
+
+.product-background {
+  position: absolute;
+  z-index: -1;
+  transform: rotate(35deg);
+  right: -20px;
+}
+
+.product-info {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.product-navigation {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 200px;
+  align-items: center;
+
+  :nth-child(3) {
+    transform: rotate(180deg);
+  }
+}
+
+.product-navigation img {
+  background-color: var(--color-2);
+  padding: 20px;
+}
