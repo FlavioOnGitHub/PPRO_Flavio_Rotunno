@@ -1,12 +1,19 @@
 .nav {
   position: fixed;
-  left: 30px;
-  right: 30px;
-  top: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 30px 30px 30px 30px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   z-index: 9;
+  background-color: #ece3d1;
+  transition: background-color 0.5s ease;
+}
+
+.nav-background {
+  background-color: transparent;
 }
 
 .nav-right-elements {
@@ -26,4 +33,77 @@
   display: flex;
   flex-flow: row wrap;
   gap: 28px;
+}
+
+/* burger menu */
+.nav-burger-menu {
+  position: fixed;
+  right: 0;
+  top: 102px;
+  padding: 35px 40px 35px;
+  height: calc(100vh - 100px);
+  font-size: 20px;
+  font-family: "proxima nova";
+  text-transform: uppercase;
+  background-color: #ece3d1;
+  z-index: -1;
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.5s ease;
+
+  ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 100px;
+    list-style: none;
+  }
+}
+
+.nav-is-hidden {
+  transform: translateX(400px);
+  opacity: 0;
+}
+
+.nav-burger-icon {
+  width: 38px;
+  height: 42px;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.nav-burger-icon div {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #000;
+}
+
+.nav-burger-icon div:nth-child(1) {
+  top: 4px;
+  transition: transform 0.3s ease;
+}
+
+.nav-burger-icon div:nth-child(2) {
+  top: 19px;
+  transition: opacity 0.3s ease;
+}
+
+.nav-burger-icon div:nth-child(3) {
+  top: 35px;
+  transition: transform 0.3s ease;
+}
+
+.nav-open div:nth-child(1) {
+  transform: translateY(15.5px) rotate(45deg);
+}
+
+.nav-open div:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-open div:nth-child(3) {
+  transform: translateY(-15.5px) rotate(-45deg);
 }
