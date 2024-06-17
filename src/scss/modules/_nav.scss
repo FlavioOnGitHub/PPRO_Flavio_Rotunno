@@ -118,13 +118,15 @@
   backdrop-filter: blur(0px);
   z-index: 2;
   transition: backdrop-filter 0.3s ease;
+  display: none;
 }
 
 .nav-active-overlay {
   backdrop-filter: blur(5px);
+  display: block;
 }
 
 /* body no scroll when menu is open */
-.nav-no-scroll {
-  overflow-y: hidden;
-}
+// .nav-no-scroll {
+//   overflow-y: hidden;
+// }

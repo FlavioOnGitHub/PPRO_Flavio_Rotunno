@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/jzw3syy.css" />
   </head>
   <body>
+    <div class="overlay-color"></div>
     <div class="nav nav-background">
       <img src="img/logo.svg" alt="" />
       <div class="nav-right-elements">
@@ -38,7 +39,7 @@
         </ul>
       </div>
     </div>
-    <header>
+    <header class="header">
       <div class="header-elements">
         <h1><img class="header-title" src="img/big-logo.png" alt="" /></h1>
         <div class="header-bottle-container">
@@ -57,7 +58,17 @@
     <main>
       <div class="product">
         <img class="product-background" src="img/malt.png" alt="" />
-        <img class="product-beer" src="img/beer.png" alt="" />
+        <img class="product-beer product-1" src="img/beer.png" alt="" />
+        <img
+          class="product-beer product-2 product-hidden"
+          src="img/beer-2.png"
+          alt=""
+        />
+        <img
+          class="product-beer product-3 product-hidden"
+          src="img/beer-3.png"
+          alt=""
+        />
         <div class="product-info">
           <span> 0% </span>
           <h2>BLONDE</h2>
@@ -65,9 +76,9 @@
           <span> 4x33cl </span>
         </div>
         <div class="product-navigation">
-          <img src="img/arrow-2.svg" alt="" />
+          <img class="product-left-arrow" src="img/arrow-2.svg" alt="" />
           <a class="button" href="">Ajouter au panier</a>
-          <img src="img/arrow-2.svg" alt="" />
+          <img class="product-right-arrow" src="img/arrow-2.svg" alt="" />
         </div>
       </div>
       <div class="valeurs">
@@ -162,5 +173,6 @@
     <script src="js/main.js" type="module"></script>
     <script src="js/nav.js" type="module"></script>
     <script src="js/header.js" type="module"></script>
+    <script src="js/product.js" type="module"></script>
   </body>
 </html>

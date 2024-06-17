@@ -14,7 +14,7 @@
 
 .product-background {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   transform: rotate(35deg);
   right: -20px;
 }
@@ -41,4 +41,13 @@
 .product-navigation img {
   background-color: var(--color-2);
   padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.product-hidden {
+  display: none;
+}
+
+.product-change-background {
+  background-color: var(--color-3);
 }
