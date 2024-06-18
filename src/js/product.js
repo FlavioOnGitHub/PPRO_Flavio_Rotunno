@@ -8,6 +8,8 @@ var beer3 = document.querySelector(".product-3");
 var leftArrow = document.querySelector(".product-left-arrow");
 var rightArrow = document.querySelector(".product-right-arrow");
 var overlaycolor = document.querySelector(".overlay-color");
+var valeursBackground = document.querySelector(".valeurs-background");
+var productArrows = document.querySelectorAll(".product-arrow");
 var beerCounter = 1;
 
 const changeColors = (color1, color2, color3) => {
@@ -23,16 +25,34 @@ var rightArrowClick = function rightArrowClick() {
     beerCounter = 2;
     changeColors("#d6c6ce", "#323131", "#252525");
     overlaycolor.classList.add("overlay-color-shown");
+    valeursBackground.classList.remove("valeurs-background-1");
+    valeursBackground.classList.add("valeurs-background-2");
+    productArrows.forEach((arrow) => {
+      arrow.classList.add("product-arrow-2");
+      arrow.classList.remove("product-arrow-1");
+    });
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
     beer3.classList.remove("product-hidden");
     beerCounter = 3;
     changeColors("#887f70", "#abd5dc", "#8eb0b6");
+    valeursBackground.classList.remove("valeurs-background-2");
+    valeursBackground.classList.add("valeurs-background-3");
+    productArrows.forEach((arrow) => {
+      arrow.classList.add("product-arrow-3");
+      arrow.classList.remove("product-arrow-2");
+    });
   } else if (beerCounter === 3) {
     beer3.classList.add("product-hidden");
     beer1.classList.remove("product-hidden");
     beerCounter = 1;
     changeColors("#604c70", "#eae9cd", "#d7d48e");
+    valeursBackground.classList.remove("valeurs-background-3");
+    valeursBackground.classList.add("valeurs-background-1");
+    productArrows.forEach((arrow) => {
+      arrow.classList.add("product-arrow-1");
+      arrow.classList.remove("product-arrow-3");
+    });
   }
 };
 
@@ -42,18 +62,35 @@ var leftArrowClick = function leftArrowClick() {
     beer3.classList.remove("product-hidden");
     beerCounter = 3;
     changeColors("#887f70", "#abd5dc", "#8eb0b6");
-    body.classList.add("body-2");
-    console.log(beerCounter);
+    overlaycolor.classList.add("overlay-color-shown");
+    valeursBackground.classList.remove("valeurs-background-1");
+    valeursBackground.classList.add("valeurs-background-3");
+    productArrows.forEach((arrow) => {
+      arrow.classList.remove("product-arrow-1");
+      arrow.classList.add("product-arrow-3");
+    });
   } else if (beerCounter === 3) {
     beer3.classList.add("product-hidden");
     beer2.classList.remove("product-hidden");
     beerCounter = 2;
     changeColors("#d6c6ce", "#323131", "#252525");
+    valeursBackground.classList.remove("valeurs-background-3");
+    valeursBackground.classList.add("valeurs-background-2");
+    productArrows.forEach((arrow) => {
+      arrow.classList.remove("product-arrow-3");
+      arrow.classList.add("product-arrow-2");
+    });
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
     beer1.classList.remove("product-hidden");
     beerCounter = 1;
     changeColors("#604c70", "#eae9cd", "#d7d48e");
+    valeursBackground.classList.remove("valeurs-background-2");
+    valeursBackground.classList.add("valeurs-background-1");
+    productArrows.forEach((arrow) => {
+      arrow.classList.add("product-arrow-1");
+      arrow.classList.remove("product-arrow-2");
+    });
   }
 };
 

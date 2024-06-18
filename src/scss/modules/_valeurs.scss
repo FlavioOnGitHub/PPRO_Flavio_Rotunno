@@ -1,5 +1,4 @@
 .valeurs {
-  background-image: url(/src/img/background-valeurs.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -11,6 +10,28 @@
   color: var(--color-1);
   text-align: center;
   position: relative;
+}
+
+.valeurs-background {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+.valeurs-background-1 {
+  filter: invert(96%) sepia(38%) saturate(679%) hue-rotate(352deg)
+    brightness(84%) contrast(89%);
+}
+
+.valeurs-background-2 {
+  filter: invert(0%) sepia(8%) saturate(19%) hue-rotate(323deg) brightness(97%)
+    contrast(83%);
+}
+
+.valeurs-background-3 {
+  filter: invert(64%) sepia(16%) saturate(366%) hue-rotate(142deg)
+    brightness(96%) contrast(86%);
 }
 
 .valeurs-text {
