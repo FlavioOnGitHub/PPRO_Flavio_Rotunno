@@ -15,6 +15,7 @@
 .nav-background {
   background-color: transparent;
   backdrop-filter: blur(0);
+  pointer-events: none;
 }
 
 .nav-right-elements {
