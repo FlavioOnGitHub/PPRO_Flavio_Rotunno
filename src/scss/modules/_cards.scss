@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  z-index: 100;
 }
 
 .cards {
@@ -13,24 +14,24 @@
   font-weight: 600;
   text-transform: uppercase;
   font-size: 25px;
-  color: var(--color-1);
-  background-color: var(--color-3);
+  color: #604c70;
+  background-color: #d7d48e;
 
   &:nth-child(2) {
-    color: var(--color-4);
-    background-color: var(--color-5);
+    color: #d6c6ce;
+    background-color: #323131;
 
     :nth-child(3) {
-      background-color: var(--color-4);
+      background-color: #d6c6ce;
     }
   }
 
   &:nth-child(3) {
-    color: var(--color-7);
-    background-color: var(--color-8);
+    color: #887f70;
+    background-color: #abd5dc;
 
     :nth-child(3) {
-      background-color: var(--color-7);
+      background-color: #887f70;
     }
   }
 }
@@ -46,7 +47,18 @@
   width: 44px;
   padding: 10px 12px;
   border-radius: 18px;
-  background-color: var(--color-1);
+}
+
+.cards-icon-1 {
+  background-color: #604c70;
+}
+
+.cards-icon-2 {
+  background-color: #d6c6ce;
+}
+
+.cards-icon-3 {
+  background-color: #887f70;
 }
 
 .cards-beer {

@@ -19,6 +19,18 @@
   right: -20px;
 }
 
+.product-background-yellow {
+  filter: saturate(0.8);
+}
+
+.product-background-dark {
+  filter: hue-rotate(-30deg) saturate(0.7) brightness(0.4) opacity(1);
+}
+
+.product-background-blue {
+  filter: hue-rotate(-230deg) saturate(0.4) brightness(0.8);
+}
+
 .product-info {
   display: flex;
   flex-flow: column wrap;
