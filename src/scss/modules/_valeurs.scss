@@ -44,7 +44,7 @@
   display: block;
 }
 
-.valeurs-text-container {
+.valeurs-text {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -68,9 +68,9 @@
   padding-bottom: 130px;
 }
 
-.valeurs-slide-2 div span:nth-child(1),
-.valeurs-slide-3 div span:nth-child(1),
-.valeurs-slide-4 div span:nth-child(1) {
+.valeurs-slide-2 span:nth-child(1),
+.valeurs-slide-3 span:nth-child(1),
+.valeurs-slide-4 span:nth-child(1) {
   font-family: "proxima-nova";
   font-weight: 700;
 }

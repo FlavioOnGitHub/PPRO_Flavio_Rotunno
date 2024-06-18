@@ -45,11 +45,88 @@ gsap.to(".valeurs-slide-1", {
   scrollTrigger: {
     trigger: ".cards-container",
     start: "top-=2000 bottom",
-    end: "top-=1800 bottom",
-    markers: true,
+    end: "top-=1600 bottom",
+    // markers: true,
     scrub: 1,
   },
-  x: -1200,
+  x: -600,
   opacity: 0,
   duration: 1,
 });
+
+const timeline1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cards-container",
+    start: "top-=1600 bottom", // Start animation when .cards-container reaches this point
+    end: "top-=1200 bottom", // End animation when .cards-container reaches this point
+    scrub: 1,
+    markers: true,
+  },
+});
+
+// Add animation sequence to the timeline
+timeline1
+  .fromTo(
+    ".valeurs-slide-2",
+    { x: 600, opacity: 0 },
+    { x: 0, opacity: 1, duration: 1 }
+  )
+  .to(".valeurs-slide-2", { duration: 1, delay: 1 }) // Pause for 1 second in the middle
+  .to(".valeurs-slide-2", { x: -600, opacity: 0, duration: 1 });
+
+const timeline2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cards-container",
+    start: "top-=1200 bottom", // Start animation when .cards-container reaches this point
+    end: "top-=800 bottom", // End animation when .cards-container reaches this point
+    scrub: 1,
+    markers: true,
+  },
+});
+
+// Add animation sequence to the timeline
+timeline2
+  .fromTo(
+    ".valeurs-slide-3",
+    { x: 600, opacity: 0 },
+    { x: 0, opacity: 1, duration: 1 }
+  )
+  .to(".valeurs-slide-3", { duration: 1, delay: 1 }) // Pause for 1 second in the middle
+  .to(".valeurs-slide-3", { x: -600, opacity: 0, duration: 1 });
+
+const timeline3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cards-container",
+    start: "top-=800 bottom", // Start animation when .cards-container reaches this point
+    end: "top-=400 bottom", // End animation when .cards-container reaches this point
+    scrub: 1,
+    markers: true,
+  },
+});
+
+// Add animation sequence to the timeline
+timeline3
+  .fromTo(
+    ".valeurs-slide-4",
+    { x: 600, opacity: 0 },
+    { x: 0, opacity: 1, duration: 1 }
+  )
+  .to(".valeurs-slide-4", { duration: 1, delay: 1 }) // Pause for 1 second in the middle
+  .to(".valeurs-slide-4", { x: -600, opacity: 0, duration: 1 });
+
+const timeline4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".cards-container",
+    start: "top-=400 bottom", // Start animation when .cards-container reaches this point
+    end: "top-=100 bottom", // End animation when .cards-container reaches this point
+    scrub: 1,
+    markers: true,
+  },
+});
+
+// Add animation sequence to the timeline
+timeline4.fromTo(
+  ".valeurs-slide-final",
+  { x: 600, opacity: 0 },
+  { x: 0, opacity: 1, duration: 1 }
+);
