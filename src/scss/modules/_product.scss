@@ -59,9 +59,12 @@
   cursor: pointer;
 
   img {
-    transition: scale 0.2s ease;
     scale: 1.1;
   }
+}
+
+.product-navigation img {
+  transition: scale 0.2s ease;
 }
 
 .product-navigation div::before {

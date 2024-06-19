@@ -277,23 +277,3 @@ gsap.fromTo(
     },
   }
 );
-
-gsap.fromTo(
-  ".beer-2",
-  {
-    opacity: -2,
-    y: 100, // Ajout d'une valeur initiale pour l'opacité si nécessaire
-  },
-  {
-    y: 0,
-    opacity: 1, // Valeur finale pour l'opacité
-    duration: 1.2,
-    scrollTrigger: {
-      trigger: ".product-beer",
-      start: "top-=450 top+=300",
-      end: "top-=200 top+=200",
-      scrub: 2,
-      //   markers: true,
-    },
-  }
-);
