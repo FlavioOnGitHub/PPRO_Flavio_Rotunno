@@ -14,6 +14,8 @@ var valeursBottle1 = document.querySelector(".valeurs-image-1");
 var valeursBottle2 = document.querySelector(".valeurs-image-2");
 var valeursBottle3 = document.querySelector(".valeurs-image-3");
 var maltBackground = document.querySelector(".product-background");
+var footer = document.querySelector(".footer");
+var valeursIcons = document.querySelectorAll(".valeurs-icon");
 var beerCounter = 1;
 
 const changeColors = (color1, color2, color3) => {
@@ -39,6 +41,12 @@ var rightArrowClick = function rightArrowClick() {
     valeursBottle2.classList.remove("valeurs-image-hidden");
     maltBackground.classList.remove("product-background-yellow");
     maltBackground.classList.add("product-background-dark");
+    footer.classList.add("footer-2");
+    footer.classList.remove("footer-1");
+    valeursIcons.forEach((icon) => {
+      icon.classList.add("valeurs-icon-2");
+      icon.classList.remove("valeurs-icon-1");
+    });
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
     beer3.classList.remove("product-hidden");
@@ -54,11 +62,17 @@ var rightArrowClick = function rightArrowClick() {
     valeursBottle3.classList.remove("valeurs-image-hidden");
     maltBackground.classList.remove("product-background-dark");
     maltBackground.classList.add("product-background-blue");
+    footer.classList.add("footer-3");
+    footer.classList.remove("footer-2");
+    valeursIcons.forEach((icon) => {
+      icon.classList.add("valeurs-icon-3");
+      icon.classList.remove("valeurs-icon-2");
+    });
   } else if (beerCounter === 3) {
     beer3.classList.add("product-hidden");
     beer1.classList.remove("product-hidden");
     beerCounter = 1;
-    changeColors("#604c70", "#eae9cd", "#d7d48e");
+    changeColors("#604c70", "#e1dfac", "#d7d48e");
     valeursBackground.classList.remove("valeurs-background-3");
     valeursBackground.classList.add("valeurs-background-1");
     productArrows.forEach((arrow) => {
@@ -69,6 +83,12 @@ var rightArrowClick = function rightArrowClick() {
     valeursBottle1.classList.remove("valeurs-image-hidden");
     maltBackground.classList.remove("product-background-blue");
     maltBackground.classList.add("product-background-yellow");
+    footer.classList.add("footer-1");
+    footer.classList.remove("footer-3");
+    valeursIcons.forEach((icon) => {
+      icon.classList.add("valeurs-icon-1");
+      icon.classList.remove("valeurs-icon-3");
+    });
   }
 };
 
@@ -89,6 +109,12 @@ var leftArrowClick = function leftArrowClick() {
     valeursBottle3.classList.remove("valeurs-image-hidden");
     maltBackground.classList.remove("product-background-yellow");
     maltBackground.classList.add("product-background-blue");
+    footer.classList.add("footer-3");
+    footer.classList.remove("footer-1");
+    valeursIcons.forEach((icon) => {
+      icon.classList.add("valeurs-icon-3");
+      icon.classList.remove("valeurs-icon-1");
+    });
   } else if (beerCounter === 3) {
     beer3.classList.add("product-hidden");
     beer2.classList.remove("product-hidden");
@@ -104,11 +130,17 @@ var leftArrowClick = function leftArrowClick() {
     valeursBottle2.classList.remove("valeurs-image-hidden");
     maltBackground.classList.remove("product-background-blue");
     maltBackground.classList.add("product-background-dark");
+    footer.classList.add("footer-3");
+    footer.classList.remove("footer-2");
+    valeursIcons.forEach((icon) => {
+      icon.classList.add("valeurs-icon-2");
+      icon.classList.remove("valeurs-icon-3");
+    });
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
     beer1.classList.remove("product-hidden");
     beerCounter = 1;
-    changeColors("#604c70", "#eae9cd", "#d7d48e");
+    changeColors("#604c70", "#e1dfac", "#d7d48e");
     valeursBackground.classList.remove("valeurs-background-2");
     valeursBackground.classList.add("valeurs-background-1");
     productArrows.forEach((arrow) => {
@@ -119,6 +151,12 @@ var leftArrowClick = function leftArrowClick() {
     valeursBottle1.classList.remove("valeurs-image-hidden");
     maltBackground.classList.remove("product-background-dark");
     maltBackground.classList.add("product-background-yellow");
+    footer.classList.add("footer-1");
+    footer.classList.remove("footer-2");
+    valeursIcons.forEach((icon) => {
+      icon.classList.add("valeurs-icon-1");
+      icon.classList.remove("valeurs-icon-2");
+    });
   }
 };
 
