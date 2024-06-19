@@ -17,6 +17,11 @@ var maltBackground = document.querySelector(".product-background");
 var footer = document.querySelector(".footer");
 var valeursIcons = document.querySelectorAll(".valeurs-icon");
 var beerCounter = 1;
+var productInfo = document.querySelector(".product-info");
+var navElementsRight = document.querySelector(".nav-right-elements");
+var navLogo = document.querySelector(".nav-logo");
+var burgerMenu = document.querySelector(".nav-burger-menu");
+var footerImgs = document.querySelectorAll(".footer-img");
 
 const changeColors = (color1, color2, color3) => {
   document.documentElement.style.setProperty("--color-1", color1);
@@ -47,11 +52,19 @@ var rightArrowClick = function rightArrowClick() {
       icon.classList.add("valeurs-icon-2");
       icon.classList.remove("valeurs-icon-1");
     });
+    productInfo.classList.add("product-info-dark-mode");
+    navElementsRight.classList.add("nav-dark-mode");
+    navLogo.classList.add("nav-dark-mode");
+    burgerMenu.classList.add("burger-menu-dark-mode");
+    footer.classList.add("footer-dark-mode");
+    footerImgs.forEach((img) => {
+      img.classList.add("footer-img-dark-mode");
+    });
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
     beer3.classList.remove("product-hidden");
     beerCounter = 3;
-    changeColors("#887f70", "#abd5dc", "#8eb0b6");
+    changeColors("#63594A", "#abd5dc", "#8eb0b6");
     valeursBackground.classList.remove("valeurs-background-2");
     valeursBackground.classList.add("valeurs-background-3");
     productArrows.forEach((arrow) => {
@@ -67,6 +80,14 @@ var rightArrowClick = function rightArrowClick() {
     valeursIcons.forEach((icon) => {
       icon.classList.add("valeurs-icon-3");
       icon.classList.remove("valeurs-icon-2");
+      productInfo.classList.remove("product-info-dark-mode");
+      navElementsRight.classList.remove("nav-dark-mode");
+      navLogo.classList.remove("nav-dark-mode");
+      burgerMenu.classList.remove("burger-menu-dark-mode");
+      footer.classList.remove("footer-dark-mode");
+      footerImgs.forEach((img) => {
+        img.classList.remove("footer-img-dark-mode");
+      });
     });
   } else if (beerCounter === 3) {
     beer3.classList.add("product-hidden");
@@ -97,7 +118,7 @@ var leftArrowClick = function leftArrowClick() {
     beer1.classList.add("product-hidden");
     beer3.classList.remove("product-hidden");
     beerCounter = 3;
-    changeColors("#887f70", "#abd5dc", "#8eb0b6");
+    changeColors("#63594A", "#abd5dc", "#8eb0b6");
     overlaycolor.classList.add("overlay-color-shown");
     valeursBackground.classList.remove("valeurs-background-1");
     valeursBackground.classList.add("valeurs-background-3");
@@ -130,11 +151,19 @@ var leftArrowClick = function leftArrowClick() {
     valeursBottle2.classList.remove("valeurs-image-hidden");
     maltBackground.classList.remove("product-background-blue");
     maltBackground.classList.add("product-background-dark");
-    footer.classList.add("footer-3");
-    footer.classList.remove("footer-2");
+    footer.classList.add("footer-2");
+    footer.classList.remove("footer-3");
     valeursIcons.forEach((icon) => {
       icon.classList.add("valeurs-icon-2");
       icon.classList.remove("valeurs-icon-3");
+    });
+    productInfo.classList.add("product-info-dark-mode");
+    navElementsRight.classList.add("nav-dark-mode");
+    navLogo.classList.add("nav-dark-mode");
+    burgerMenu.classList.add("burger-menu-dark-mode");
+    footer.classList.add("footer-dark-mode");
+    footerImgs.forEach((img) => {
+      img.classList.add("footer-img-dark-mode");
     });
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
@@ -157,6 +186,14 @@ var leftArrowClick = function leftArrowClick() {
       icon.classList.add("valeurs-icon-1");
       icon.classList.remove("valeurs-icon-2");
     });
+    productInfo.classList.remove("product-info-dark-mode");
+    navElementsRight.classList.remove("nav-dark-mode");
+    navLogo.classList.remove("nav-dark-mode");
+    burgerMenu.classList.remove("burger-menu-dark-mode");
+    footer.classList.remove("footer-dark-mode");
+    footerImgs.forEach((img) => {
+      img.classList.remove("footer-img-dark-mode");
+    });
   }
 };
 
@@ -171,7 +208,7 @@ gsap.fromTo(
   },
   {
     y: 0,
-    opacity: 1, // Valeur finale pour l'opacité
+    opacity: 3, // Valeur finale pour l'opacité
     duration: 1,
     scrollTrigger: {
       trigger: ".product",
@@ -223,6 +260,26 @@ gsap.fromTo(
 
 gsap.fromTo(
   ".product-navigation",
+  {
+    opacity: -2,
+    y: 100, // Ajout d'une valeur initiale pour l'opacité si nécessaire
+  },
+  {
+    y: 0,
+    opacity: 1, // Valeur finale pour l'opacité
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: ".product-beer",
+      start: "top-=450 top+=300",
+      end: "top-=200 top+=200",
+      scrub: 2,
+      //   markers: true,
+    },
+  }
+);
+
+gsap.fromTo(
+  ".beer-2",
   {
     opacity: -2,
     y: 100, // Ajout d'une valeur initiale pour l'opacité si nécessaire

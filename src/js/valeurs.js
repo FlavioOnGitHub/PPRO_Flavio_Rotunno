@@ -61,7 +61,7 @@ const timeline1 = gsap.timeline({
     start: "top-=2400 bottom", // Start animation when .cards-container reaches this point
     end: "top-=1800 bottom", // End animation when .cards-container reaches this point
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -86,7 +86,7 @@ const timeline2 = gsap.timeline({
     start: "top-=1800 bottom", // Start animation when .cards-container reaches this point
     end: "top-=1200 bottom", // End animation when .cards-container reaches this point
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -111,7 +111,7 @@ const timeline3 = gsap.timeline({
     start: "top-=1200 bottom", // Start animation when .cards-container reaches this point
     end: "top-=600 bottom", // End animation when .cards-container reaches this point
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -136,7 +136,7 @@ const timeline4 = gsap.timeline({
     start: "top-=600 bottom", // Start animation when .cards-container reaches this point
     end: "top-=100 bottom", // End animation when .cards-container reaches this point
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 

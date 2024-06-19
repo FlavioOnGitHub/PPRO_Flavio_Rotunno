@@ -13,9 +13,11 @@
   width: calc(100% / 3);
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 2vw;
   color: #604c70;
   background-color: #d7d48e;
+  overflow: hidden;
+  position: relative;
 
   &:nth-child(2) {
     color: #d6c6ce;
@@ -27,12 +29,25 @@
   }
 
   &:nth-child(3) {
-    color: #887f70;
+    color: #63594a;
     background-color: #abd5dc;
 
     :nth-child(3) {
-      background-color: #887f70;
+      background-color: #63594a;
     }
+  }
+
+  &:hover .cards-icon {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:hover img:first-of-type {
+    filter: blur(30px);
+  }
+
+  &:hover .cards-description {
+    opacity: 1;
   }
 }
 
@@ -47,6 +62,15 @@
   width: 3vw;
   padding: 0.7vw 0.8vw;
   border-radius: 1.2vw;
+  opacity: 0;
+  transform: translateX(50);
+  transition: opacity 0.4s ease, transform 0.2s ease, border-radius 0.2s ease;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 4px;
+  }
 }
 
 .cards-icon-1 {
@@ -63,4 +87,20 @@
 
 .cards-beer {
   width: 30vw;
+}
+
+.cards img:first-of-type {
+  transition: filter 0.2s ease;
+}
+
+.cards-description {
+  text-align: center;
+  position: absolute;
+  font-size: 1.6vw;
+  font-family: "josefin-sans";
+  text-transform: none;
+  width: 80%;
+  top: 230px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }

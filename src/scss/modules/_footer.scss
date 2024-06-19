@@ -27,9 +27,14 @@ footer {
   gap: 10px 20px;
 
   a {
-    text-decoration: none;
+    text-decoration: underline 1.5px transparent;
     text-transform: uppercase;
     font-size: 14px;
+    transition: text-decoration 0.2s ease;
+
+    &:hover {
+      text-decoration: underline 1.5px;
+    }
   }
 }
 
@@ -42,6 +47,12 @@ footer {
 .footer-left div img {
   max-width: 40px;
   max-height: 40px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
 
 .footer-right {
@@ -77,6 +88,7 @@ footer {
     border: none;
     outline: none;
     font-size: 14px;
+    width: 15vw;
 
     &::placeholder {
       text-transform: uppercase;
@@ -92,6 +104,13 @@ footer {
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
+    transition: background-color 0.4s ease, color 0.4s ease;
+
+    &:hover {
+      background-color: var(--color-1);
+      color: var(--color-2);
+      cursor: pointer;
+    }
   }
 }
 
@@ -99,4 +118,22 @@ footer {
   display: flex;
   justify-content: flex-end;
   opacity: 0.5;
+}
+
+.footer-dark-mode {
+  color: var(--color-1);
+}
+
+.footer-img-dark-mode {
+  filter: brightness(0) saturate(100%) invert(79%) sepia(5%) saturate(392%)
+    hue-rotate(277deg) brightness(99%) contrast(101%);
+}
+
+.footer-logo {
+  transition: 0.2s ease-in-out;
+  animation: none;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
 }
