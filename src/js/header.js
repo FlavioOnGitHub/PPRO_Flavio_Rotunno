@@ -77,7 +77,8 @@ gsap.to(".header-arrow", {
     // markers: true,
     scrub: 2,
   },
-  opacity: -1,
+  opacity: -3,
+  y: -500,
   duration: 1,
 });
 

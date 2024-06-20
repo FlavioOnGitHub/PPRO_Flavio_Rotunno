@@ -10,6 +10,7 @@
 
 .product-beer {
   width: 530px;
+  z-index: 5;
 }
 
 .product-background {
@@ -109,6 +110,13 @@
   filter: invert(50%) sepia(32%) saturate(179%) hue-rotate(359deg)
     brightness(94%) contrast(83%);
 }
-// .product-change-background {
-//   background-color: var(--color-3);
-// }
+
+.product-infos-container {
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 1;
+}
+
+.product-info-hidden {
+  display: none;
+}

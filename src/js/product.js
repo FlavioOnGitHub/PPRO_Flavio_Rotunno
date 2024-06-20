@@ -17,11 +17,13 @@ var maltBackground = document.querySelector(".product-background");
 var footer = document.querySelector(".footer");
 var valeursIcons = document.querySelectorAll(".valeurs-icon");
 var beerCounter = 1;
-var productInfo = document.querySelector(".product-info");
 var navElementsRight = document.querySelector(".nav-right-elements");
 var navLogo = document.querySelector(".nav-logo");
 var burgerMenu = document.querySelector(".nav-burger-menu");
 var footerImgs = document.querySelectorAll(".footer-img");
+var productInfo1 = document.querySelector(".product-info-1");
+var productInfo2 = document.querySelector(".product-info-2");
+var productInfo3 = document.querySelector(".product-info-3");
 
 const changeColors = (color1, color2, color3) => {
   document.documentElement.style.setProperty("--color-1", color1);
@@ -52,7 +54,7 @@ var rightArrowClick = function rightArrowClick() {
       icon.classList.add("valeurs-icon-2");
       icon.classList.remove("valeurs-icon-1");
     });
-    productInfo.classList.add("product-info-dark-mode");
+    productInfo2.classList.add("product-info-dark-mode");
     navElementsRight.classList.add("nav-dark-mode");
     navLogo.classList.add("nav-dark-mode");
     burgerMenu.classList.add("burger-menu-dark-mode");
@@ -60,6 +62,8 @@ var rightArrowClick = function rightArrowClick() {
     footerImgs.forEach((img) => {
       img.classList.add("footer-img-dark-mode");
     });
+    productInfo1.classList.add("product-info-hidden");
+    productInfo2.classList.remove("product-info-hidden");
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
     beer3.classList.remove("product-hidden");
@@ -80,7 +84,7 @@ var rightArrowClick = function rightArrowClick() {
     valeursIcons.forEach((icon) => {
       icon.classList.add("valeurs-icon-3");
       icon.classList.remove("valeurs-icon-2");
-      productInfo.classList.remove("product-info-dark-mode");
+      productInfo2.classList.remove("product-info-dark-mode");
       navElementsRight.classList.remove("nav-dark-mode");
       navLogo.classList.remove("nav-dark-mode");
       burgerMenu.classList.remove("burger-menu-dark-mode");
@@ -89,6 +93,8 @@ var rightArrowClick = function rightArrowClick() {
         img.classList.remove("footer-img-dark-mode");
       });
     });
+    productInfo2.classList.add("product-info-hidden");
+    productInfo3.classList.remove("product-info-hidden");
   } else if (beerCounter === 3) {
     beer3.classList.add("product-hidden");
     beer1.classList.remove("product-hidden");
@@ -110,6 +116,8 @@ var rightArrowClick = function rightArrowClick() {
       icon.classList.add("valeurs-icon-1");
       icon.classList.remove("valeurs-icon-3");
     });
+    productInfo3.classList.add("product-info-hidden");
+    productInfo1.classList.remove("product-info-hidden");
   }
 };
 
@@ -136,6 +144,8 @@ var leftArrowClick = function leftArrowClick() {
       icon.classList.add("valeurs-icon-3");
       icon.classList.remove("valeurs-icon-1");
     });
+    productInfo1.classList.add("product-info-hidden");
+    productInfo3.classList.remove("product-info-hidden");
   } else if (beerCounter === 3) {
     beer3.classList.add("product-hidden");
     beer2.classList.remove("product-hidden");
@@ -157,7 +167,7 @@ var leftArrowClick = function leftArrowClick() {
       icon.classList.add("valeurs-icon-2");
       icon.classList.remove("valeurs-icon-3");
     });
-    productInfo.classList.add("product-info-dark-mode");
+    productInfo2.classList.add("product-info-dark-mode");
     navElementsRight.classList.add("nav-dark-mode");
     navLogo.classList.add("nav-dark-mode");
     burgerMenu.classList.add("burger-menu-dark-mode");
@@ -165,6 +175,8 @@ var leftArrowClick = function leftArrowClick() {
     footerImgs.forEach((img) => {
       img.classList.add("footer-img-dark-mode");
     });
+    productInfo3.classList.add("product-info-hidden");
+    productInfo2.classList.remove("product-info-hidden");
   } else if (beerCounter === 2) {
     beer2.classList.add("product-hidden");
     beer1.classList.remove("product-hidden");
@@ -186,7 +198,7 @@ var leftArrowClick = function leftArrowClick() {
       icon.classList.add("valeurs-icon-1");
       icon.classList.remove("valeurs-icon-2");
     });
-    productInfo.classList.remove("product-info-dark-mode");
+    productInfo2.classList.remove("product-info-dark-mode");
     navElementsRight.classList.remove("nav-dark-mode");
     navLogo.classList.remove("nav-dark-mode");
     burgerMenu.classList.remove("burger-menu-dark-mode");
@@ -194,6 +206,8 @@ var leftArrowClick = function leftArrowClick() {
     footerImgs.forEach((img) => {
       img.classList.remove("footer-img-dark-mode");
     });
+    productInfo2.classList.add("product-info-hidden");
+    productInfo1.classList.remove("product-info-hidden");
   }
 };
 
